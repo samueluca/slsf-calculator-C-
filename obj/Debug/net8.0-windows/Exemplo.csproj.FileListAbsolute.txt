@@ -19,3 +19,4 @@ C:\Users\aluno.senai.pjcn\source\repos\Exemplo\bin\Debug\net8.0-windows\NBitcoin
 C:\Users\aluno.senai.pjcn\source\repos\Exemplo\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\aluno.senai.pjcn\source\repos\Exemplo\obj\Debug\net8.0-windows\Exemplo.csproj.AssemblyReference.cache
 C:\Users\aluno.senai.pjcn\source\repos\Exemplo\obj\Debug\net8.0-windows\Exemplo.csproj.Up2Date
+C:\Users\aluno.senai.pjcn\source\repos\Exemplo\obj\Debug\net8.0-windows\Exemplo.sourcelink.json

@@ -1,4 +1,6 @@
 ﻿using Exemplo.Classes;
+using System.Configuration;
+using System.Runtime.Intrinsics.Arm;
 
 namespace Exemplo
 {
@@ -9,128 +11,187 @@ namespace Exemplo
         {
             InitializeComponent();
             op = new Operacoes();
+
         }
 
-        public void setInputValues()
+        public void cleanInputs()
+        {
+            string vazio = " ";
+            inputTextX.Visible = true;
+            inputTextX.Text = vazio;
+
+
+            inputTextY.Visible = true;
+            inputTextY.Text = vazio;
+        }
+        public void setInputs()
         {
             op.setXFromInput(double.Parse(inputTextX.Text));
-            op.setYFromInput(double.Parse(inputTextY.Text));
-        }
-
-        public void printResult(double x, double y, string opSymbol, double result)
-        {
-            string operacaoDisplay;
-
-            switch (opSymbol)
+            if (String.IsNullOrWhiteSpace(inputTextY.Text))
             {
-                case "soma":
-                    operacaoDisplay = $"{x} + {y}";
-                    break;
-                case "sub":
-                    operacaoDisplay = $"{x} - {y}";
-                    break;
-                case "mult":
-                    operacaoDisplay = $"{x} * {y}";
-                    break;
-                case "div":
-                    operacaoDisplay = $"{x} / {y}";
-                    break;
-                case "quad":
-                    operacaoDisplay = $"Quadrado de {x} ({x}²)";
-                    break;
-                case "raiz":
-                    operacaoDisplay = $"Raiz de {x} (√{x})";
-                    break;
-                case "porc":
-                    operacaoDisplay = $"{x}% de {y}";
-                    break;
-                case "bin":
-                    operacaoDisplay = $"Binario ({x} e {y})";
-                    break;
-                case "elev":
-                    operacaoDisplay = $"Potência ({x} ^ {y})";
-                    break;
-                default:
-                    operacaoDisplay = "Cálculo desconhecido";
-                    break;
+                op.setYFromInput(0);
+            }
+            else
+            {
+                op.setYFromInput(double.Parse(inputTextY.Text));
             }
 
-            string formatoSaida = $"Operação: {operacaoDisplay}\n\n";
-            formatoSaida += $"O resultado é: {result:F4}";
 
+
+        }
+
+        public void printResult1(double x, double y, string operacao, double result)
+        {
+            string formatoSaida = " " + x + operacao + " = ";
             labelOutput.Visible = true;
             labelOutput.Text = formatoSaida;
+
+            string resultado = "" + result + "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
         }
 
-        private void onSomaClick(object sender, EventArgs e)
+        public void printResult2(double x, double y, string operacao, double result)
         {
-            setInputValues();
+            string formatoSaida = " " + x + operacao + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+
+            string resultado = "" + result + "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
+
+        }
+
+        public void printResult3(double x, double y, string operacao, double result)
+        {
+            string formatoSaida = " " + operacao + x + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+
+            string resultado = "" + result + "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
+
+        }
+        public void printResult6(string operacao)
+        {
+            string formatoSaida = " ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+
+            string resultado = "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
+
+            string vazio = " ";
+            inputTextX.Visible = true;
+            inputTextX.Text = vazio;
+
+
+            inputTextY.Visible = true;
+            inputTextY.Text = vazio;
+
+
+        }
+        public void printResult(double x, double y, string operacao, double result)
+        {
+            string formatoSaida = "" + x + operacao + y + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+
+            string resultado = "" + result + "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
+        }
+
+        public void printResult4(double x, double y, string operacao, double result)
+        {
+            string formatoSaida = "" + y + operacao + x + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+
+            string resultado = "" + result + "";
+            labelOutput2.Visible = true;
+            labelOutput2.Text = resultado;
+        }
+        public void onBtnSoma_Click(object sender, EventArgs e)
+        {
+            setInputs();
             double result = op.soma();
-            printResult(op.getX(), op.getY(), "soma", result);
+            printResult(op.getX(), op.getY(), " + ", result);
         }
 
-        private void onSubClick(object sender, EventArgs e)
+        public void onBtnSubtracao_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.sub();
-            printResult(op.getX(), op.getY(), "sub", result);
+            setInputs();
+            double result = op.subtracao();
+            printResult(op.getX(), op.getY(), " - ", result);
         }
 
-        private void onMultClick(object sender, EventArgs e)
+        public void onBtnMultiplicacao_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.mult();
-            printResult(op.getX(), op.getY(), "mult", result);
+            setInputs();
+            double result = op.multiplicacao();
+            printResult(op.getX(), op.getY(), " x ", result);
         }
 
-        private void onDivClick(object sender, EventArgs e)
+        public void onBtnDivisao_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.div();
-            printResult(op.getX(), op.getY(), "div", result);
+            setInputs();
+            double result = op.divisao();
+            printResult(op.getX(), op.getY(), " / ", result);
         }
 
-        private void onQuadClick(object sender, EventArgs e)
+        public void onBtnvalorQuadrado_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.quad();
-            printResult(op.getX(), op.getY(), "quad", result);
+            setInputs();
+            double result = op.valorQuadrado();
+            printResult1(op.getX(), op.getX(), "^²", result);
         }
 
-        private void onRaizClick(object sender, EventArgs e)
+        public void onBtnraizQuadrada_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.raiz();
-            printResult(op.getX(), op.getY(), "raiz", result);
+            setInputs();
+            double result = op.raizQuadrada();
+            printResult3(op.getX(), op.getX(), " Raiz quadrada de ", result);
         }
 
-        private void onPorcClick(object sender, EventArgs e)
+        public void onBtnPorcentagem_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.porc();
-            printResult(op.getX(), op.getY(), "porc", result);
+            setInputs();
+            double result = op.porcentagem();
+            printResult4(op.getX(), op.getY(), "% de ", result);
         }
 
-        private void onBinClick(object sender, EventArgs e)
+        public void onBtnBinario_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = (double)op.bin();
-            printResult(op.getX(), op.getY(), "bin", result);
+            setInputs();
+            double result = op.binario();
+            printResult1(op.getX(), op.getY(), " em binario é ", result);
         }
 
-        private void onElevClick(object sender, EventArgs e)
+        public void onBtnRaizY_Click(object sender, EventArgs e)
         {
-            setInputValues();
-            double result = op.elev();
-            printResult(op.getX(), op.getY(), "elev", result);
+            setInputs();
+            double result = op.raizY();
+            printResult(op.getX(), op.getY(), " elevado á ", result);
         }
 
-        private void inputTextX_TextChanged(object sender, EventArgs e)
+        public void onBtnApagar_Click(object sender, EventArgs e)
         {
+            setInputs();
+            string result = op.apagar();
+            printResult6(" ");
 
         }
 
         private void inputTextY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelOutput_Click(object sender, EventArgs e)
         {
 
         }
@@ -140,4 +201,5 @@ namespace Exemplo
 
         }
     }
+
 }

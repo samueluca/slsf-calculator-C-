@@ -14,92 +14,106 @@ namespace Exemplo.Classes
             x = 0; y = 0;
         }
 
+        //Getters e Setters
+
         public void setXFromInput(double x)
         {
             this.x = x;
-        }
-
-        public void setYFromInput(double y)
-        {
-            this.y = y;
         }
 
         public double getX()
         {
             return this.x;
         }
-
         public double getY()
         {
             return this.y;
         }
-
+        public void setYFromInput(double y)
+        {
+            this.y = y;
+        }
 
         public double soma()
         {
             return this.x + this.y;
         }
-
-        public double sub()
+        public double subtracao()
         {
             return this.x - this.y;
+
         }
 
-        public double mult()
+        public double multiplicacao()
         {
             return this.x * this.y;
         }
 
-        public double div()
+        public double divisao()
         {
             return this.x / this.y;
         }
 
-        public double quad()
+        public double valorQuadrado()
         {
             return this.x * this.x;
         }
 
-        public double raiz()
+        public double raizQuadrada()
         {
-            return Math.Sqrt(this.x);
+            return this.x / this.x;
         }
 
-        public double porc()
+        public double porcentagem()
         {
-            return (this.x / 100.0) * this.y;
+            return (this.x / 100) * this.y;
         }
 
-        public double bin()
+        public double binario()
         {
-            long xInt = (long)this.x;
-            if (xInt <= 0)
+            long value = (long)this.x;
+
+            if (value <= 0)
             {
                 return 0000;
-
             }
             else
             {
-                String res = "";
-                while (xInt > 0)
+                String restos = "";
+                while (value > 0)
                 {
-                    res += xInt % 2;
-                    xInt = xInt / 2;
-
+                    restos += value % 2;
+                    value = value / 2;
                 }
-                String finalRes = "";
-                for (int i = res.Length - 1; i >= 0; i--)
+                String resultadoBinario = "";
+                for (int i = restos.Length - 1; i >= 0; i--)
                 {
-                    finalRes += res[i];
+                    resultadoBinario += restos[i];
                 }
-
-                return long.Parse(finalRes);
+                return long.Parse(resultadoBinario);
             }
+
         }
 
-        public double elev()
+        public double raizY()
         {
-            return Math.Pow(this.x, this.y);
+            int count = 0;
+            double result = this.x;
+
+            while (count < (this.y - 1))
+            {
+                result *= this.x;
+                count++;
+            }
+            return result;
         }
+
+        public string apagar()
+        {
+            return "";
+
+        }
+
+
     }
 }
