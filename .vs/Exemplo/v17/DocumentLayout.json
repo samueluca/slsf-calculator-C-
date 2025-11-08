@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\",
+  "WorkspaceRootPath": "C:\\Users\\senai.dsvsis\\workspace\\slsf-calculator-C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84BD7D69-849F-49AF-B686-46A6064B8312}|Exemplo.csproj|c:\\users\\aluno.senai.pjcn\\source\\repos\\exemplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{84BD7D69-849F-49AF-B686-46A6064B8312}|Exemplo.csproj|c:\\users\\senai.dsvsis\\workspace\\slsf-calculator-c-\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{84BD7D69-849F-49AF-B686-46A6064B8312}|Exemplo.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84BD7D69-849F-49AF-B686-46A6064B8312}|Exemplo.csproj|c:\\users\\aluno.senai.pjcn\\source\\repos\\exemplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84BD7D69-849F-49AF-B686-46A6064B8312}|Exemplo.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,26 +28,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\senai.dsvsis\\workspace\\slsf-calculator-C-\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Form1.cs [Projeto]",
+              "ToolTip": "C:\\Users\\senai.dsvsis\\workspace\\slsf-calculator-C-\\Form1.cs [Projeto]",
               "RelativeToolTip": "Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T01:04:34.442Z",
+              "WhenOpened": "2025-11-08T00:19:25.566Z",
               "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\aluno.senai.pjcn\\source\\repos\\Exemplo\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T01:04:21.129Z",
-              "EditorCaption": ""
             }
           ]
         }
