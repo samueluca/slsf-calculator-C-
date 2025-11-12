@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Samuel Lucas Santos Fernandes")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fbaaaf0c83c681bb864814bd5f03c6aef69857c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71e2045ef962b17739ece36cfc81ffc40c4f6b4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exemplo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exemplo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
